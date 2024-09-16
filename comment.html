@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment box</title>
+</head>
+
+<body>
+    <h1>All comments</h1>
+    <div id="comments">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis minima provident numquam illum mollitia,
+            assumenda necessitatibus corporis saepe doloremque dolorum. Reiciendis similique ea iusto nostrum tenetur
+            voluptate quos delectus possimus in! Voluptatibus praesentium fuga sapiente tempora unde ipsa at harum
+            aliquid autem, omnis hic, doloremque quam perspiciatis impedit doloribus veniam recusandae consequatur!
+            Esse, est placeat maxime accusamus iure nesciunt ipsum.</p>
+        <p>Fuga quaerat culpa quos magni iure pariatur delectus minima qui libero totam. Sint architecto, enim iste
+            quidem fugit minus iusto perspiciatis reprehenderit exercitationem fuga corporis explicabo sed. Voluptatibus
+            voluptatem nobis quae earum! Neque et autem atque omnis cupiditate minima possimus nobis ipsam, laudantium
+            veniam. Quas nulla expedita, quam perspiciatis eaque consequuntur deleniti modi, aspernatur doloremque
+            mollitia tempore eveniet velit tenetur.</p>
+        <p>Quas porro optio ducimus necessitatibus minima dicta quod odio, laboriosam tenetur, animi reiciendis odit
+            architecto dolore beatae ad, nihil soluta ex dignissimos unde exercitationem. Adipisci amet voluptates eius
+            id quae, veritatis eaque eligendi asperiores harum obcaecati! Eveniet officia suscipit, fugit vitae porro
+            iure debitis ullam dolorum quisquam cum perferendis, sequi assumenda quae itaque voluptate alias incidunt
+            dolorem quia beatae explicabo?</p>
+    </div>
+
+    <textarea name="" id="textfield" cols="50" rows="5"></textarea> <br>
+    <button id="post">Add Comment</button>
+
+    <script>
+        //step1: addeventlistener add
+        document.getElementById('post').addEventListener('click', function () {
+            // 2.get the comment 
+            const commentBox = document.getElementById('textfield');
+            const newComment = commentBox.value;
+
+            // step 3  det the comment inside the comment container 
+            const commentContainer = document.getElementById('comments')
+            const p = document.createElement('p')
+            p.innerText = newComment;
+            commentContainer.appendChild(p)
+
+            4.// clear box 
+            commentBox.value = '';
+        })
+    </script>
+</body>
+
+</html>
